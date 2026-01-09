@@ -5,7 +5,7 @@ Play against the AI directly in your browser!
 
 ## 🚀 Demo
 
-TODO
+https://svetlana-soboleva.github.io/rockPaperScissors/
 
 ## 📸 Features
 
