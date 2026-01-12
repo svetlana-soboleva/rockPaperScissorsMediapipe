@@ -13,18 +13,17 @@
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
 </head>
 
-<body class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col items-center justify-center px-2 sm:px-4">
+<body class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col items-center justify-start sm:justify-center px-2 sm:px-4 py-2">
 
-  <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 sm:mb-8 tracking-wide text-center">
+  <h1 class="text-xl sm:text-4xl md:text-5xl font-extrabold mb-2 sm:mb-8 tracking-wide text-center">
     ✊ Rock Paper Scissors ✋
   </h1>
 
-  <div class="flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-10 mb-6 sm:mb-8 w-full max-w-4xl">
-    <!-- YOU -->
+  <div class="flex flex-col md:flex-row justify-center items-center gap-2 sm:gap-6 mb-2 sm:mb-4 w-full">
     <div class="flex flex-col items-center w-full md:w-auto">
-      <p class="text-base sm:text-lg font-semibold mb-2 text-gray-300">YOU</p>
+      <p class="text-sm sm:text-lg font-semibold mb-1 text-gray-300">YOU</p>
 
-      <div class="w-full sm:w-72 aspect-[4/3] rounded-xl overflow-hidden relative border-4 border-green-500 shadow-lg max-w-xs">
+      <div class="w-full sm:w-72 aspect-[4/3] rounded-lg overflow-hidden relative border-2 sm:border-4 border-green-500 shadow-lg max-w-[180px] sm:max-w-xs">
         <video
           id="video"
           autoplay
@@ -40,40 +39,38 @@
         ></canvas>
       </div>
 
-      <div id="playerResult" class="mt-3 text-base sm:text-lg font-bold text-green-400 hidden"></div>
+      <div id="playerResult" class="mt-1 text-xs sm:text-lg font-bold text-green-400 hidden"></div>
     </div>
-    <!-- VS -->
-    <div class="text-2xl sm:text-3xl font-extrabold text-gray-400 select-none my-4 md:my-0">
+    <div class="text-xl sm:text-3xl font-extrabold text-gray-400 select-none my-1 md:my-0">
       VS
     </div>
-    <!-- AI -->
     <div class="flex flex-col items-center w-full md:w-auto">
-      <p class="text-base sm:text-lg font-semibold mb-2 text-gray-300">AI</p>
+      <p class="text-sm sm:text-lg font-semibold mb-1 text-gray-300">AI</p>
 
-      <div class="w-full sm:w-72 aspect-[4/3] rounded-xl overflow-hidden relative border-4 border-red-500 shadow-lg max-w-xs">
+      <div class="w-full sm:w-72 aspect-[4/3] rounded-lg overflow-hidden relative border-2 sm:border-4 border-red-500 shadow-lg max-w-[180px] sm:max-w-xs">
         <img
           id="aiImage"
           src="assets/main.png"
-          class="absolute inset-0 w-full h-full object-cover"
+          class="absolute inset-0 w-full h-full object-fit"
           alt="AI Move"
         />
         <span
           id="countdown"
-          class="hidden absolute inset-0 flex items-center justify-center text-5xl sm:text-8xl font-extrabold text-white bg-black bg-opacity-60"
+          class="hidden absolute inset-0 flex items-center justify-center text-4xl sm:text-8xl font-extrabold text-white bg-black bg-opacity-60"
         ></span>
       </div>
 
-      <div id="aiResult" class="mt-3 text-base sm:text-lg font-bold text-red-400 hidden"></div>
+      <div id="aiResult" class="mt-1 text-xs sm:text-lg font-bold text-red-400 hidden"></div>
     </div>
   </div>
 
   <div
     id="result"
-    class="text-xl sm:text-2xl font-extrabold mb-4 sm:mb-6 hidden px-4 sm:px-6 py-2 sm:py-3 rounded-lg bg-gray-800 border border-gray-700 text-center"
+    class="text-base sm:text-2xl font-extrabold mb-2 sm:mb-6 hidden px-3 sm:px-6 py-1 sm:py-3 rounded-lg bg-gray-800 border border-gray-700 text-center"
   ></div>
   <button
     id="startButton"
-    class="px-4 sm:px-5 py-2 text-base sm:text-lg font-bold rounded-full
+    class="px-4 sm:px-5 py-2 text-sm sm:text-lg font-bold rounded-full
            bg-gradient-to-r from-green-500 to-emerald-600
            hover:from-green-400 hover:to-emerald-500
            active:scale-95 transition-all duration-200 shadow-xl"

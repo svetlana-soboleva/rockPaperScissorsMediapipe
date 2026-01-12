@@ -84,6 +84,7 @@ playBtn.addEventListener("click", async () => {
   countDownEl.classList.add("hidden");
   aiImage.classList.remove("hidden");
 
+  
   playerMove = getGesture(latestLandmarks);
 
   if (!playerMove) {
