@@ -5,7 +5,7 @@ Play against the AI directly in your browser!
 
 ## 🚀 Demo
 
-https://svetlana-soboleva.github.io/rockPaperScissors/
+[https://svetlana-soboleva.github.io/rockPaperScissors/](https://svetlana-soboleva.github.io/rockPaperScissorsMediapipe/)
 
 ## 📸 Features
 
